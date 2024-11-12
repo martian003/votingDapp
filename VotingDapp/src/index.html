@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Voting Dapp</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Vote for Best Leader</h2>
+        <p>Voting through Ethereum Blockchain Network</p>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card" style="width:250px">
+                    <img class="card-img-top" src="images/modi.png" style="width:100%"/>
+                    <div class="card-body">
+                        <h4 class="card-title">Narendra Modi</h4>
+                        <p class="card-text">Prime Minister of India</p>
+                        <a class="btn btn-success btn-vote" data-id="0" href="#">Vote</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width:250px">
+                    <img class="card-img-top" src="images/putin.png" style="width:100%"/>
+                    <div class="card-body">
+                        <h4 class="card-title">Vladimir Putin</h4>
+                        <p class="card-text">President of Russia</p>
+                        <a class="btn btn-warning btn-vote" data-id="1" href="#">Vote</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width:250px">
+                    <img class="card-img-top" src="images/biden.png" style="width:100%"/>
+                    <div class="card-body">
+                        <h4 class="card-title">Joe Biden</h4>
+                        <p class="card-text">President of USA</p>
+                        <a class="btn btn-danger btn-vote" data-id="2" href="#">Vote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/><br/>
+    <div class="container">
+        <h2>Votes</h2>
+        <p>Following are the votes polled through Blockchain Network</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name of the Contestant</th>
+                    <th>Number of Votes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Narendra Modi</td>
+                    <td id="v1">0</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Vladimir Putin</td>
+                    <td id="v2">0</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Joe Biden</td>
+                    <td id="v3">0</td>
+                </tr>
+            </tbody>
+        </table>
+        <center>
+            <p>Your Wallet address is <b id="add"></b> </p>
+        </center>
+    </div>
+    <!-- Latest version of web3.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.0/web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/truffle-contract@4.0.31/dist/truffle-contract.min.js"></script> 
+    <script src="app.js"></script>
+</body>
+</html>

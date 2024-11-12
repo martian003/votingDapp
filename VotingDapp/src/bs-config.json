@@ -1,0 +1,11 @@
+{
+    "server": {
+      "baseDir": ["../src", "../build/contracts"]
+    },
+    "files": ["./**/*.{html,htm,css,js}"],
+    "watchOptions": {
+      "ignored": "node_modules"
+    },
+    "open": false
+  }
+  
